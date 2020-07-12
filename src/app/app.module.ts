@@ -14,9 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginPageComponent, DashboardPageComponent, NavbarComponent],
+  declarations: [AppComponent, LoginPageComponent, DashboardPageComponent, NavbarComponent, TableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
