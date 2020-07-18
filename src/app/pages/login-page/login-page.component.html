@@ -1,12 +1,13 @@
-<form class="login-form">
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class=" login-form">
     <h1 class="text-center">Inicia sesión</h1>
     <mat-form-field class="w-100" appearance="outline">
         <mat-label>Correo</mat-label>
-        <input type="email" matInput required>
+        <input formControlName="username" type="email" matInput required>
     </mat-form-field>
     <mat-form-field class="w-100" appearance="outline">
         <mat-label>Contraseña</mat-label>
-        <input type="password" matInput required>
+        <input formControlName="password" type="password" matInput required>
     </mat-form-field>
-    <button (click)="handleLogin()" class="btn btn-block" mat-raised-button color="primary">Iniciar sesión</button>
+    <button type="submit" class="btn btn-block" mat-raised-button
+        color="primary">{{isLoading ? 'loading' : 'Iniciar sesión'}}</button>
 </form>
